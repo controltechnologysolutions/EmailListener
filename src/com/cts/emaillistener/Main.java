@@ -39,7 +39,7 @@ public class Main {
 		try{
 			//add timeout so that connection may not hang
 			Properties prop = System.getProperties();
-			prop.put("mail.store.protocol","pop3");
+			prop.put("mail.store.protocol", properties.get("mail.smtp.protocol"));
 			//			prop.put("mail.transport.protocol","smtp");
 			prop.put("mail.smtp.host", properties.get("mail.smtp.host"));
 			prop.put("mail.smtp.port",properties.get("mail.smtp.port"));
