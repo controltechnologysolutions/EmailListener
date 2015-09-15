@@ -29,7 +29,7 @@ public class DBManager {
 		}catch(Exception e){
 
 			try{
-			    FileInputStream fis = new FileInputStream("C:/Users/AMLabs Dev/Development/workspace/EmailListener/EmailListener/"+propName+".properties");
+				FileInputStream fis = new FileInputStream("F:/Github/EmailListener/resources/" + propName + ".properties");
 			    prop.load(fis);
 				fis.close();
 			}catch(Exception e1){
