@@ -177,7 +177,10 @@ public class Main {
 		}
 
 		String from = m.getFrom()[0].toString();
-		from = from.substring(from.indexOf("<")+1, from.indexOf(">"));
+		if (from.indexOf("<") != -1 && from.indexOf(">") != -1) {
+			from = from.substring(from.indexOf("<") + 1, from.indexOf(">"));
+		}
+
 
 		//if it is a response or reply (= contains ##), don't update the detail field
 		// it only updates the detail field if it is the first e-mail (which opens the request)
